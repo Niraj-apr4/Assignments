@@ -1,14 +1,14 @@
 #set par(justify: true)
 #set text(font:"STIX Two Text")
 
+#set page(footer: [ICFVIT 2026 Poster Write up])
 #set document(title: [Report on Deep Learning Enhanced Background
  Oriented Schlieren for analysis of droplet Evaporation])
 
 #title()
-#footnote[International Conference on
-Flow Visualization and Imaging Technique (ICFVIT 2026) ]
 
 #align(center)[Based on Work done by Partha Dutta , & KIRAN RAJ M]
+#align(center)[Name : Niraj Kumar Singh , Roll no : AM25M807]
 
 = Introduction
 The work is done to analyse the droplet evaporation after impact . This phe
