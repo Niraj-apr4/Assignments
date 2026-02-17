@@ -1,9 +1,58 @@
-#set text(font: "STIX Two Text")
-#set document(
-title: [ICFVIT 2026 Report]
-)
+#set par(justify: true)
+#set text(font:"STIX Two Text")
+
+#set document(title: [Report on Deep Learning Enhanced Background
+ Oriented Schlieren for analysis of droplet Evaporation])
+
 #title()
+#footnote[International Conference on
+Flow Visualization and Imaging Technique (ICFVIT 2026) ]
 
-based on following @patil2023insight
+#align(center)[Based on Work done by Partha Dutta , & KIRAN RAJ M]
 
-#bibliography(".extra/refs.bib",title: none)
+= Introduction
+The work is done to analyse the droplet evaporation after impact . This phe
+nomenon involves following multiphysics
++ Coupled Fluid Motion
++ Heat Transfer and Phase Change
+
+the surrounding vapour cloud influences the evaporation rate and so on
+droplets lifetime and stability 
+
+= Objectives
+== BOS Technique
+in BOS technique , the fluid we want to study is placed between a random
+dot pattern and a camera ,then a picture is taken for refrence . then we take
+another picture when fluid is under study and compare both pictures .  
+
+= Setup and Methodology
+
+== setup
+
++ background pattern : 20mm $times$ 20mm field of view with dot size of 0.01mm(~ 1pixel)
+and 54% dot coverage
++ droplet generation and impact condition :
+  + dilute acetone-water solution (1:3)
+    ratio
+  + diameter of droplet : 2.5mm
++ geometric Parameter of BOS
+  + Z_grad : distance between background and heated substrate 
+  + Z_lens : distance between lens and background  
+
+== Methodology
++ Two BOS video at 2000fps were recorded for reference and distorted background
++ frames were extracted , merged and cropped to 512 x 512 pixels
++ displacement field were obtained using cross correlation and physics
+  based CNN
+  
+= Mathematical Modeling
+Based on displacemnt field , required refractive index is found out
+$ (partial n)/(partial x) = c Delta x  $ $ (partial n)/(partial y) = c
+Delta y $ where $ c = (n_0)/(2 z_("grad") Delta x_p)$ , where n#sub[0] is
+the refractive index of air , $Delta z_p$ is the half widith of field of view
+obtained from image callibration .
+
+Based on the boundary conditon of of refractive index of air around it
+refractive conditon of mixture is calculated to find out the concentration
+of droplet after impact 
+= Result Discussion and Conclusion 
