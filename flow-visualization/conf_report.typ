@@ -1,7 +1,7 @@
 #set par(justify: true)
 #set text(font:"STIX Two Text")
 
-#set page(footer: [ICFVIT 2026 Poster Write up])
+#set page(footer: [#line() 2026 Poster Write up])
 #set document(title: [Report on Deep Learning Enhanced Background
  Oriented Schlieren for analysis of droplet Evaporation])
 
@@ -45,7 +45,7 @@ and 54% dot coverage
 + displacement field were obtained using cross correlation and physics
   based CNN to improve the quallity of BOS images 
   
-= Mathematical Modeling
+= Mathematical Modeling 
 Based on displacemnt field , required refractive index is found out
 $ (partial n)/(partial x) = c Delta x  $ $ (partial n)/(partial y) = c
 Delta y $ where $ c = (n_0)/(2 z_("grad") Delta x_p)$ , where n#sub[0] is
