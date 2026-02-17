@@ -1,7 +1,7 @@
 #set par(justify: true)
 #set text(font:"STIX Two Text")
 
-#set page(footer: [#line() 2026 Poster Write up])
+#set page(footer: [#line(length: 100%) 2026 Poster Write up])
 #set document(title: [Report on Deep Learning Enhanced Background
  Oriented Schlieren for analysis of droplet Evaporation])
 
