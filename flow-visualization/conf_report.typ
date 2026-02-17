@@ -43,7 +43,7 @@ and 54% dot coverage
 + Two BOS video at 2000fps were recorded for reference and distorted background
 + frames were extracted , merged and cropped to 512 x 512 pixels
 + displacement field were obtained using cross correlation and physics
-  based CNN
+  based CNN to improve the quallity of BOS images 
   
 = Mathematical Modeling
 Based on displacemnt field , required refractive index is found out
@@ -56,3 +56,15 @@ Based on the boundary conditon of of refractive index of air around it
 refractive conditon of mixture is calculated to find out the concentration
 of droplet after impact 
 = Result Discussion and Conclusion 
+== Comparison of resultant displacement field
+ Cross corelation captures the overall droplet evaporation structure, but
+spatial window averaging reduces the effective resolution and increases the
+noise robustness 
+==  Result and Conclusion
++ transverse droplet oscillations is observed after impact as evident in
+resultant displacement field 
++ these oscillation arise due to competition between initial impact inertial,
+surface tension recoil and heat induced non uniform evaporation near the
+contact line on heated substrate
+
+
