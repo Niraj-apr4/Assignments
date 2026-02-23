@@ -53,7 +53,17 @@ calculate and plot
 ````@example main
 app_y = linear_coeff(t,y_with_noise)*t
 lines!(t,app_y)
-current_figure()
+display(current_figure())
+````
+
+question no 2
+
+````@example main
+using Lux , Random
+
+model = Dense(10 => 5)
+rng = Random.default_rng()
+Random.seed!(rng,0)
 ````
 
 ---
