@@ -56,6 +56,7 @@ lines!(t,app_y)
 save("plot1.png", current_figure())  # save it
 ````
 
+![plot1](plot1.png)
 question no 2
 
 ````@example main

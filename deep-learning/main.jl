@@ -34,6 +34,7 @@ app_y = linear_coeff(t,y_with_noise)*t
 lines!(t,app_y)
 save("plot1.png", current_figure())  # save it
 
+# ![plot1](plot1.png)
 # question no 2
 using Lux , Random
 
