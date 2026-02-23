@@ -1,5 +1,5 @@
 # functions required
-using CairoMakie
+using GLMakie
 
 # selecting the test function to be f(x) = exp(x) sin(x)
 function test_fun(t)
@@ -32,7 +32,7 @@ end
 # calculate and plot 
 app_y = linear_coeff(t,y_with_noise)*t
 lines!(t,app_y)
-save("plot1.png", current_figure())  # save it
+display(current_fig())
 
 # ![plot1](plot1.png)
 # question no 2
