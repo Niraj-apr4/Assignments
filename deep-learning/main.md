@@ -53,7 +53,7 @@ calculate and plot
 ````@example main
 app_y = linear_coeff(t,y_with_noise)*t
 lines!(t,app_y)
-display(current_figure())
+save("plot1.png", current_figure())  # save it
 ````
 
 question no 2
