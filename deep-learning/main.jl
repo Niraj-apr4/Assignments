@@ -31,15 +31,27 @@ end
 
 # calculate and plot 
 app_y = linear_coeff(t,y_with_noise)*t
-lines!(t,app_y)
-display(current_fig())
+# lines!(t,app_y)
+# display(current_fig())
 
 # ![plot1](plot1.png)
 # question no 2
-using Lux , Random
+ 
+using Flux, Statistics
+using Flux: train! 
 
-model = Dense(10 => 5)
-rng = Random.default_rng()
-Random.seed!(rng,0)
+t_train = hcat(t)'
+y_train = hcat(y_with_noise)'
+
+predict = Dense(1 => 1)
+
+loss(model, x, y) = mean(abs2.(model(x) .- y))
 
 
+opt = Descent()
+data = [(t_train,y_train)]
+
+# for epoch in 1:20
+#     train!(loss, predict, data, opt)
+#     @show loss(predict , t_train, y_train)
+# end
