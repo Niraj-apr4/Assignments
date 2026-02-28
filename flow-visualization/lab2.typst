@@ -1,0 +1,27 @@
+
+#set par(justify: true)
+#set text(font:"STIX Two Text")
+
+#set page(footer: [#line(length: 100%) 2026 Poster Write up])
+#set document(title: [Multi Exposure and High Speed Photography])
+
+#title()
+
+#align(center)[Name : Niraj Kumar Singh , Roll no : AM25M807]
+
+
+= Objective
++ Evaluate the trajectory of a freely falling droplet with multi
+  exposure photography
++ Capture the splashing of droplets on a pool of water
+ 
+= Theory
+
+ 
+= Apparatus & procedure
+
+ 
+= Results & discussion
+
+ 
+= Conclusion
