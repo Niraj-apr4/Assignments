@@ -2,7 +2,7 @@ program monte_carlo
     implicit none 
 
     ! variable declararions 
-    integer, parameter :: N = 100000
+    integer, parameter :: N = 70
     real , dimension(N) :: x, y, z
     real :: val , f_sum = 0.0 , f_sq_sum = 0.0 , f_avg, f_sq_avg , f_rms , vol
     real :: ans
