@@ -1,13 +1,16 @@
 program poisson
+    ! Q2 - poisson Method
+    use omp_lib
     ! use double precision arithmetic
     implicit none 
 
     integer , parameter :: n = 10
-    integer :: i,j,k
+    integer :: i,j,k, nthreads
     real , dimension(n,n) :: x, y ,phi
     real :: delta
 
-    phi = 0.0
+    ! all value initialized to 0
+    phi = 0.0d0
 
     delta = 1.0/n
 
@@ -20,18 +23,20 @@ program poisson
 
     ! boundary is set to 0
     do k = 1, 100
+        !$omp parallel do private(i, j) collapse(2)
         do i = 2,n-1
             do j = 2,n-1
                 phi(i,j) = (phi(i+1,j) + phi(i-1,j) + phi(i, j+1) + phi(i,j-1))/4 &
                            & + delta ** 2 / 4 * q(x(i,j) , y(i,j))
             end do 
         end do 
+        !$omp end parallel do
     end do 
 
     ! output value 
     do i = 1 ,n
         do j = 1, n
-            write(*,*) x(i,j) ,",", y(i,j) ,",", phi(i,j), "," , phi_exact(x(i,j),y(i,j)) 
+            write(*,*) "x:", x(i,j),"y:",  y(i,j) , "phi_approx :" , phi(i,j), "phi_exact" , phi_exact(x(i,j),y(i,j)) 
         end do
     end do
 

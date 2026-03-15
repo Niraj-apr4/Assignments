@@ -1,4 +1,5 @@
 program monte_carlo
+    ! Q1 - Monte Carlo Method
     use omp_lib
     implicit none 
 
