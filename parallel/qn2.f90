@@ -13,8 +13,8 @@ program poisson
 
     do i = 1, n
         do j = 1, n
-            x(i,j) = -1 + delta * i 
-            y(i,j) = -1 + delta * j 
+            x(i,j) = -1 + delta * i * 2 
+            y(i,j) = -1 + delta * j * 2
         end do 
     end do 
 
@@ -31,7 +31,7 @@ program poisson
     ! output value 
     do i = 1 ,n
         do j = 1, n
-            write(*,*) x(4,5) , y(i,j) , phi(5,5)
+            write(*,*) x(i,j) ,",", y(i,j) ,",", phi(i,j), "," , phi_exact(x(i,j),y(i,j)) 
         end do
     end do
 

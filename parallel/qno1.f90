@@ -3,10 +3,10 @@ program monte_carlo
 
     ! variable declararions 
     integer, parameter :: N = 100000
-    real , dimension(N) :: x, y, z
-    real :: val , f_sum = 0.0 , f_sq_sum = 0.0 , f_avg, f_sq_avg , f_rms , vol
-    real :: ans
-    integer :: i, j 
+    real(8) , dimension(N) :: x, y, z
+    real(8) :: val , f_sum = 0.0d0 , f_sq_sum = 0.0d0 , f_avg, f_sq_avg , f_rms , vol
+    real(8) :: ans
+    integer :: i 
 
 
     ! N = no of random poins , larger N better approximations
@@ -25,19 +25,16 @@ program monte_carlo
 
     f_avg = f_sum / N
     f_sq_avg = f_sq_sum / N
-    f_rms = (f_sq_avg - f_avg **2)/N
+    f_rms = sqrt((f_sq_avg - f_avg **2)/N)
 
-    vol = 4 * 3 * 2 
-    
-    ans = vol * f_avg + vol * f_rms
-
-    print * , ans , f_avg , f_rms
+    vol = 4.0d0 * 3.0d0 * 2.0d0
+    print * ,"INTEGRAL = ", vol * f_avg , "+/-"  , f_rms * vol
 
 
     contains
     function func(x, y, z) result(val)
-        real :: x, y , z
-        real :: val
+        real(8) :: x, y , z
+        real(8) :: val
         val = 4 * x ** 3 + x * y ** 2 + 5 * y + y * z + 6 * z
     end
 end program 
